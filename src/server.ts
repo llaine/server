@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { NextFunction, Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import compression from 'compression';
 import helmet from 'helmet';
@@ -6,7 +6,6 @@ import morgan from 'morgan';
 import FaceRouter from 'routes/face';
 
 const app = express();
-const PORT = 8080;
 
 const env = app.get('env') === 'development';
 app.use(helmet());
@@ -18,6 +17,8 @@ app.use(compression());
 // Resources routing starts here
 app.use('/faces', FaceRouter);
 
-app.listen(PORT, () => {
-  console.log(`Listening to port ${PORT} in ${env ? 'development' : 'production'} mode`);
-})
+app.use((err: Error, req: Request, res: Response, _: NextFunction) => {
+  return res.status(500).json({ error: err.message || 'Something went wrong' });
+});
+
+export default app;

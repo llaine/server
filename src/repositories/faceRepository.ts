@@ -7,7 +7,7 @@ class FaceRepository {
       return {
         id: Faker.random.number(),
         name: Faker.name.findName(),
-        avatar: `https://i.pravatar.cc/150?img=${i}`
+        avatar: Faker.image.avatar()
       }
     })
   }

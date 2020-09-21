@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import FaceRepository from 'repositories/FaceRepository';
+import FaceRepository from 'repositories/faceRepository';
 
 const FaceRouter = Router();
 

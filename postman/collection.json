@@ -1,0 +1,30 @@
+{
+	"info": {
+		"_postman_id": "4c8fde40-7891-4e1e-9876-add4fb0589b6",
+		"name": "@llaine/server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Faces",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}:{{port}}/faces",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"faces"
+					]
+				},
+				"description": "Get all the Faces"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

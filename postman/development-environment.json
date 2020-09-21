@@ -1,0 +1,19 @@
+{
+	"id": "eea85c32-f9fe-4394-9357-1a9f4fa2b2ea",
+	"name": "Development",
+	"values": [
+		{
+			"key": "host",
+			"value": "localhost",
+			"enabled": true
+		},
+		{
+			"key": "port",
+			"value": "8080",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2020-09-21T11:41:23.275Z",
+	"_postman_exported_using": "Postman/7.25.0"
+}
